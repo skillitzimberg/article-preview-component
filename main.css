@@ -1,1 +1,7 @@
-
+article {
+  width: 33vw;
+  height: 67vh;
+  margin: 10vh auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
