@@ -1,6 +1,12 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
 article {
-  width: 33vw;
-  height: 67vh;
+  width: 375px;
   margin: 10vh auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -9,4 +15,13 @@ article {
 img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: justify;
+  line-height: 1.5em;
+  color: hsl(217, 19%, 35%);
+  margin: 2em;
 }
