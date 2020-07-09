@@ -7,7 +7,10 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   > <!-- displays site properly based on user's device -->
-
+  <script
+    defer
+    src="main.js"
+  ></script>
   <link
     rel="icon"
     type="image/png"
@@ -59,31 +62,67 @@
       </p>
     </main>
 
-    <footer>
-      <figure>
-        <img
-          class="avatar"
-          src="./images/avatar-michelle.jpg"
-          alt="Photo of the author, Michelle Appleton"
+    <footer
+      id="foot"
+      class=""
+    >
+      <section class="foot-content">
+        <figure
+          id="author"
+          class=""
         >
-        <figcaption>
-          <h1>
-            Michelle Appleton
-          </h1>
-          <p>
-            28 Jun 2020
-          </p>
-        </figcaption>
-      </figure>
+          <img
+            class="avatar"
+            src="./images/avatar-michelle.jpg"
+            alt="Photo of the author, Michelle Appleton"
+          >
+          <figcaption>
+            <h1>
+              Michelle Appleton
+            </h1>
+            <p>
+              28 Jun 2020
+            </p>
+          </figcaption>
+        </figure>
 
-      <button class="share-button">
-        <img
-          class="share-svg"
-          src="./images/icon-share.svg"
-          alt="Share icon"
+        <aside
+          id="social"
+          class="hidden"
         >
-      </button>
+          <p>SHARE</p>
+          <figure>
+            <img
+              class="social-icon"
+              src="images/icon-facebook.svg"
+              alt="Facebook icon"
+            >
+            <img
+              class="social-icon"
+              src="images/icon-twitter.svg"
+              alt="Twitter icon"
+            >
+            <img
+              class="social-icon"
+              src="images/icon-pinterest.svg"
+              alt="Pinterest icon"
+            >
+          </figure>
+        </aside>
 
+        <button
+          class="share-button"
+          onclick="active()"
+        >
+          <svg
+            class="share-svg"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+            /></svg>
+        </button>
+      </section>
     </footer>
   </section>
 
