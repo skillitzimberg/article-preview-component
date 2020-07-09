@@ -1,27 +1,140 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --dark-greyish-blue: hsl(217, 19%, 35%);
+  --greyish-blue: hsl(212, 23%, 69%);
+  --light-greyish-blue: hsl(210, 46%, 95%);
+  --dark-blue: hsl(214, 17%, 51%);
+}
+/* specificity: 0010 or 1111? */
+html {
+  font-family: Manrope, sans-serif;
+  color: hsl(217, 19%, 35%);
+  background-color: var(--light-greyish-blue);
 }
 
-body {
-  background-color: hsl(210, 46%, 95%);
-}
-article {
+/* specificity: 0001 */
+section {
+  display: flex;
+  flex-wrap: wrap;
   width: 375px;
   margin: 10vh auto;
-  border: 1px solid black;
+  background-color: white;
   border-radius: 10px;
 }
 
+header {
+  width: 100%;
+  height: 250px;
+  background-image: url('images/drawers.jpg');
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+/* specificity: 0001 */
 img {
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
 
-.heading {
-  font-weight: bold;
-  font-size: 1.2em;
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 80%;
+  height: 15rem;
+  margin: 2rem auto 0;
+}
+
+/* specificity: 0010 */
+h1 {
+  font-weight: 700;
+  font-size: 1.1rem;
   text-align: justify;
-  line-height: 1.5em;
-  color: hsl(217, 19%, 35%);
-  margin: 2em;
+  line-height: 1.5rem;
+}
+
+/* specificity: 0001 */
+p {
+  color: hsl(212, 23%, 69%);
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* specificity: 0010 */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0 1rem;
+}
+
+figure {
+  display: flex;
+  width: 68%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 3rem;
+}
+
+figcaption > h1 {
+  font-size: 0.9rem;
+}
+
+figcaption > p {
+  font-size: 0.9rem;
+}
+
+/* specificity: 0010 */
+.share-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--light-greyish-blue);
+}
+
+/* specificity: 0010 */
+.share-svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+/* specificity: 0010 */
+.dark {
+  background-color: var(--dark-blue);
+}
+
+/* specificity: 0011 */
+.dark p {
+  color: white;
+}
+
+/* specificity: 0010 */
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 2vw;
+  border-radius: 0;
+}
+
+/* specificity: 0010 */
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* specificity: 0010 */
+.hidden {
+  display: none;
 }
