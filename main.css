@@ -1,13 +1,14 @@
 :root {
-  --dark-greyish-blue: hsl(217, 19%, 35%);
-  --greyish-blue: hsl(212, 23%, 69%);
-  --light-greyish-blue: hsl(210, 46%, 95%);
-  --dark-blue: hsl(214, 17%, 51%);
+  --dark-greyish-blue: #48556a;
+  --greyish-blue: #9eafc2;
+  --light-greyish-blue: #ecf2f8;
+  --dark-blue: #6d7f97;
 }
-/* specificity: 0010 or 1111? */
-html {
+
+/* specificity: 0001 */
+body {
   font-family: Manrope, sans-serif;
-  color: hsl(217, 19%, 35%);
+  color: var(--dark-greyish-blue);
   background-color: var(--light-greyish-blue);
 }
 
@@ -21,6 +22,7 @@ section {
   border-radius: 10px;
 }
 
+/* specificity: 0001 */
 header {
   width: 100%;
   height: 250px;
@@ -36,16 +38,17 @@ img {
   border-radius: 10px 10px 0 0;
 }
 
+/* specificity: 0001 */
 main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   width: 80%;
   height: 15rem;
-  margin: 2rem auto 0;
+  margin: 2rem auto 1rem;
 }
 
-/* specificity: 0010 */
+/* specificity: 0001 */
 h1 {
   font-weight: 700;
   font-size: 1.1rem;
@@ -55,21 +58,29 @@ h1 {
 
 /* specificity: 0001 */
 p {
-  color: hsl(212, 23%, 69%);
+  color: var(--greyish-blue);
   line-height: 1.5rem;
   font-size: 0.95rem;
 }
 
-/* specificity: 0010 */
+/* specificity: 0001 */
 footer {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+/* specificity: 0010 */
+.foot-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   margin: 0 auto;
-  padding: 2rem 0 1rem;
+  padding: 1.5rem 0;
+  background-color: inherit;
 }
 
+/* specificity: 0001 */
 figure {
   display: flex;
   width: 68%;
@@ -77,6 +88,14 @@ figure {
   align-items: center;
 }
 
+/* specificity: 0010 */
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* specificity: 0001 */
 figcaption {
   display: flex;
   flex-flow: column nowrap;
@@ -84,12 +103,45 @@ figcaption {
   height: 3rem;
 }
 
+/* specificity: 0002 */
 figcaption > h1 {
   font-size: 0.9rem;
 }
 
+/* specificity: 0002 */
 figcaption > p {
   font-size: 0.9rem;
+}
+
+/* specificity: 0010 */
+.active {
+  background-color: var(--dark-greyish-blue);
+}
+
+/* specificity: 0011 */
+.active aside {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+/* specificity: 0012 */
+.active aside figure {
+  width: 7rem;
+}
+
+/* specificity: 0011 */
+.active p {
+  font-size: 0.85rem;
+  letter-spacing: 0.4rem;
+  color: var(--greyish-blue);
+}
+
+/* specificity: 0010 */
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0;
 }
 
 /* specificity: 0010 */
@@ -97,41 +149,31 @@ figcaption > p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 2.3rem;
   background-color: var(--light-greyish-blue);
+}
+
+/* specificity: 0020 */
+.active .share-button {
+  background-color: var(--dark-blue);
 }
 
 /* specificity: 0010 */
 .share-svg {
-  width: 0.8rem;
-  height: 0.8rem;
-}
-
-/* specificity: 0010 */
-.dark {
-  background-color: var(--dark-blue);
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 /* specificity: 0011 */
-.dark p {
-  color: white;
+.share-svg > path {
+  fill: var(--dark-greyish-blue);
 }
 
-/* specificity: 0010 */
-.social-icon {
-  width: 20px;
-  height: 20px;
-  margin: 0 2vw;
-  border-radius: 0;
-}
-
-/* specificity: 0010 */
-.avatar {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+/* specificity: 0021 */
+.active .share-svg > path {
+  fill: var(--light-greyish-blue);
 }
 
 /* specificity: 0010 */
